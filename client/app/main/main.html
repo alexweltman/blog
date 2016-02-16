@@ -6,7 +6,8 @@
       <div class="photo">
         <img class= "img-responsive" src="/assets/images/cb.png"\>
       </div>
-
+      <div ng-repeat="blogPost in posts">
+        <post-listing post="blogPost"></post-listing>
     </div>
   </div>
 </div>

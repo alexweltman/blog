@@ -4,12 +4,17 @@
 
 class MainController {
 
-  constructor($http) {
-    this.$http = $http;
-    this.awesomeThings = [];
+  addStuff(num1, num2) {
+    return this.num1 + this.num2;
+  }
 
-    $http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
+  constructor($http, $scope) {
+    this.$http = $http;
+    this.$scope = $scope;
+    this.$scope.posts = [];
+
+    $http.get('/api/posts').then(response => {
+      this.$scope.posts = response.data;
     });
   }
 
