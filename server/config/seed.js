@@ -4,38 +4,35 @@
  */
 
 'use strict';
-import Thing from '../api/thing/thing.model';
+import Post from '../api/post/post.model';
 import User from '../api/user/user.model';
 
-Thing.find({}).removeAsync()
+Post.find({}).removeAsync()
   .then(() => {
-    Thing.create({
-      name: 'Development Tools',
-      info: 'Integration with popular tools such as Bower, Grunt, Babel, Karma, ' +
-             'Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, ' +
-             'Stylus, Sass, and Less.'
+    Post.create({
+      title: 'Seed Blog Post #1',
+      author: 'Alex Weltman',
+      body: 'ibus. Mauris mauris orci, pellentesque sit amet tempor id,'+
+      'hendrerit ut orci. Vivamus iaculis est malesuada diam fermentum ' +
+      'fringilla. Donec rutrum porta nunc, in auctor sem fermentum a.' +
+      'hendrerit. Quisque eu pulvinar mauris, nec volutpat arcu. Integer quis felis' +
+      'felis, auctor non eros in, dignissim vehicula metus.'
     }, {
-      name: 'Server and Client integration',
-      info: 'Built with a powerful and fun stack: MongoDB, Express, ' +
-             'AngularJS, and Node.'
+      title: 'Seed Blog Post #2',
+      author: 'Bernie Sanders',
+      body: 'ibus. Mauris mauris orci, pellentesque sit amet tempor id,'+
+      'hendrerit ut orci. Vivamus iaculis est malesuada diam fermentum ' +
+      'fringilla. Donec rutrum porta nunc, in auctor sem fermentum a.' +
+      'hendrerit. Quisque eu pulvinar mauris, nec volutpat arcu. Integer quis felis' +
+      'felis, auctor non eros in, dignissim vehicula metus.'
     }, {
-      name: 'Smart Build System',
-      info: 'Build system ignores `spec` files, allowing you to keep ' +
-             'tests alongside code. Automatic injection of scripts and ' +
-             'styles into your index.html'
-    }, {
-      name: 'Modular Structure',
-      info: 'Best practice client and server structures allow for more ' +
-             'code reusability and maximum scalability'
-    }, {
-      name: 'Optimized Build',
-      info: 'Build process packs up your templates as a single JavaScript ' +
-             'payload, minifies your scripts/css/images, and rewrites asset ' +
-             'names for caching.'
-    }, {
-      name: 'Deployment Ready',
-      info: 'Easily deploy your app to Heroku or Openshift with the heroku ' +
-             'and openshift subgenerators'
+      title: 'Seed Blog Post #3',
+      author: 'DONALD TRUMP',
+      body: 'ibus. Mauris mauris orci, pellentesque sit amet tempor id,'+
+      'hendrerit ut orci. Vivamus iaculis est malesuada diam fermentum ' +
+      'fringilla. Donec rutrum porta nunc, in auctor sem fermentum a.' +
+      'hendrerit. Quisque eu pulvinar mauris, nec volutpat arcu. Integer quis felis' +
+      'felis, auctor non eros in, dignissim vehicula metus.'
     });
   });
 
