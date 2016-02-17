@@ -4,15 +4,20 @@
 
 class MainController {
 
-  constructor($http, $scope) {
+  constructor($http, $scope, $state) {
     this.$http = $http;
     this.$scope = $scope;
+    this.$state = $state;
     this.$scope.posts = [];
 
     $http.get('/api/posts').then(response => {
       this.$scope.posts = response.data;
     });
   }
+
+  // goToPost(postId){
+  //   this.$state.go("post", {"postId" : postId});
+  // }
 
   addThing() {
     if (this.newThing) {
