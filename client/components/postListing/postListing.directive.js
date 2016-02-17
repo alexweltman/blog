@@ -5,7 +5,7 @@ angular.module('blogApp')
     return {
       scope: { post : '='},
       templateUrl: 'components/postListing/postListing.html',
-      restrict: 'EA',
+      restrict: 'E',
       link: function (scope, element, attrs) {
         scope.goToPost = function(postId){
           console.log('calling goTopost in link function');
