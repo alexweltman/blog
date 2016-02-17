@@ -1,5 +1,9 @@
 # blog
 
+It's a basic blog. I might use it for my personal website, if I ever think of anything interesting to say.  Mostly this is just for fun.
+
+
+<hr>
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.1.1.
 
 ## Getting Started
