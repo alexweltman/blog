@@ -4,7 +4,7 @@ describe('Directive: postListing', function () {
 
   // load the directive's module and view
   beforeEach(module('blogApp'));
-  beforeEach(module('app/postListing/postListing.html'));
+  beforeEach(module('components/postListing/postListing.html'));
 
   var element, scope;
 

@@ -12,12 +12,9 @@ class MainController {
 
     $http.get('/api/posts').then(response => {
       this.$scope.posts = response.data;
+      console.log(this.$scope.posts);
     });
   }
-
-  // goToPost(postId){
-  //   this.$state.go("post", {"postId" : postId});
-  // }
 
   addThing() {
     if (this.newThing) {
