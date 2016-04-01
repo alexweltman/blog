@@ -10,11 +10,9 @@ class PostController {
     this.$stateParams = $stateParams;
     this.$scope.posts = [];
     this.$scope.id = this.$stateParams.postId;
-    console.log('postID', this.$scope.id);
 
     $http.get('/api/posts/'+this.$scope.id).then(response => {
       this.$scope.post = response.data;
-      console.log(this.$scope.post);
     });
   }
 }
