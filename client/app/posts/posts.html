@@ -1,0 +1,15 @@
+<navbar></navbar>
+<div class="container">
+  <ul class="list-group user-list">
+    <li class="list-group-item" ng-repeat="post in posts" >
+	    <div class="user-info" >
+	        <strong class="pointer" ng-click="navigator.goToPost(post._id)">
+            {{post.title}}
+          </strong><br>
+	        <span class="text-muted">{{post.date}}</span> |
+          <span class="text-muted">{{post.author}}</span>
+	    </div>
+        <a ng-click="openConfirmDeleteModal(post)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
+    </li>
+  </ul>
+</div>

@@ -12,19 +12,7 @@ class MainController {
 
     $http.get('/api/posts').then(response => {
       this.$scope.posts = response.data;
-      console.log(this.$scope.posts);
     });
-  }
-
-  addThing() {
-    if (this.newThing) {
-      this.$http.post('/api/things', { name: this.newThing });
-      this.newThing = '';
-    }
-  }
-
-  deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
   }
 }
 
