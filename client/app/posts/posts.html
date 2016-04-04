@@ -9,6 +9,7 @@
 	        <span class="text-muted">{{post.date}}</span> |
           <span class="text-muted">{{post.author}}</span>
 	    </div>
+        <a ng-click="navigator.goToEdit(post._id)" class="trash icon"><span class="fa fa-pencil fa-2x"></span></a>
         <a ng-click="openConfirmDeleteModal(post)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
     </li>
   </ul>
