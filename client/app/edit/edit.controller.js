@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('blogApp.edit', ['textAngular'])
-  .controller('EditCtrl', function ($scope, $http, $stateParams) {
+  .controller('EditCtrl', function ($scope, $http, $stateParams, navigator) {
 
     $scope.init = function() {
       $scope.id = $stateParams.postId
@@ -11,7 +11,7 @@ angular.module('blogApp.edit', ['textAngular'])
 
     $scope.updatePostAndRefresh = function(post) {
       updatePost(post).then(function(response){
-        getPost();
+        navigator.goToPost(post._id);
       });
     };
 

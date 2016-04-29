@@ -1,6 +1,6 @@
 <div ng-click="navigator.goToPost(post._id)" class="pointer">
   <h3>{{post.title}}</h3>{{router.log()}}
-  <div class="post-author">{{post.author}}</author>
-  <div class="post-date">{{post.date}}</author>
-  <div class="post-content">{{post.body}}</author>
+  <div class="post-author">{{post.author}}</div>
+  <div class="post-date">{{post.date}}</div>
+  <div class="post-content" ng-bind-html="post.body"></div>
 </div>
